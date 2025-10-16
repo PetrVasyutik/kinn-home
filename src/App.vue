@@ -1,11 +1,16 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+<header class="header">
+  <MainHeader />
+</header>
+<main class="main">
+  <div class="container">
+    <h1>Kinn Home</h1>
+  </div>
+</main>
+<footer class="footer"></footer>
 </template>
-
-<style scoped></style>
+<script setup>
+import MainHeader from '@/components/MainHeader.vue';
+</script>
+<style scoped lang="scss">
+</style>

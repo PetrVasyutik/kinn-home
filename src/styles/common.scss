@@ -1,0 +1,148 @@
+// Общие стили проекта: заголовки, кнопки, контейнеры, утилиты
+// Используются CSS-переменные из variables.scss и SCSS-переменные при необходимости
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-text-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+.header {
+  flex: 0 0 auto;
+  height: 100px;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+  height: 100px;
+  background-color: var(--color-bg-secondary);
+}
+
+// Контейнер
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--layout-8);
+  max-width: 1424px;
+}
+
+// Заголовки
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-text-primary);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 40px);
+}
+h2 {
+  font-size: clamp(24px, 3vw, 32px);
+}
+h3 {
+  font-size: clamp(20px, 2.5vw, 28px);
+}
+h4 {
+  font-size: clamp(18px, 2vw, 24px);
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Кнопки (базовые стили и варианты)
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}

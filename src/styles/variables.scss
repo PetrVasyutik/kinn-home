@@ -1,0 +1,69 @@
+// Глобальные SCSS-переменные и CSS Custom Properties
+
+// SCSS variables (можно использовать в вычислениях)
+$color-primary: #2f80ed;
+$color-primary-hover: #1c6add;
+$color-bg-primary: #ffffff;
+$color-bg-secondary: #ffffef;
+$color-text-primary: #56593d;
+$color-text-secondary: #ffffff;
+
+$font-text-primary:
+  'Roboto',
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+$font-text-secondary:
+  'Jost',
+  'Roboto',
+  ui-sans-serif,
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$layout-4: 16px;
+$space-6: 24px;
+$layout-8: 32px;
+$layout-12: 48px;
+
+// Экспортируем те же значения как CSS-переменные для использования в SFC/браузере
+:root {
+  --color-primary: #{$color-primary};
+  --color-bg-primary: #{$color-bg-primary};
+  --color-bg-secondary: #{$color-bg-secondary};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+
+  --font-text-primary: #{$font-text-primary};
+  --font-text-secondary: #{$font-text-secondary};
+  --font-size-base: #{$font-size-base};
+  --line-height-base: #{$line-height-base};
+
+  --space-1: #{$space-1};
+  --space-2: #{$space-2};
+  --space-3: #{$space-3};
+  --layout-4: #{$layout-4};
+  --space-6: #{$space-6};
+  --layout-8: #{$layout-8};
+  --layout-12: #{$layout-12};
+}
