@@ -21,9 +21,9 @@
         <LogoIcon />
       </div>
       <div class="main-header__actions">
-        <BasketIcon />
-        <SearchIcon />
         <UserIcon />
+        <SearchIcon />
+        <BasketIcon />
       </div>
     </div>
   </header>
@@ -62,9 +62,8 @@ const navigation = [
 <style scoped lang="scss">
 .main-header {
   position: relative;
-  max-width: 1424px;
-  margin: 0 auto;
   box-sizing: border-box;
+  margin-bottom: var(--layout-5);
 
   &__decor {
     width: 100%;
@@ -73,7 +72,7 @@ const navigation = [
   }
 
   &__container {
-    max-width: 100%;
+    max-width: 1424px;
     padding: var(--layout-6) calc(2 * var(--layout-8)) var(--layout-6) calc(2 * var(--layout-8));
     display: flex;
     align-items: center;
