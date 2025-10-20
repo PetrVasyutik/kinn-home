@@ -4,7 +4,6 @@
 </header>
 <main class="main">
   <div class="container">
-    <h1>Kinn Home</h1>
   </div>
 </main>
 <footer class="footer"></footer>

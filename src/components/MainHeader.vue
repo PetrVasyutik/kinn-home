@@ -9,8 +9,10 @@
             v-for="item in navigation"
             :key="item.name">
             <a class="main-header__navigation-link" :href="item.href">
-              {{ item.name }}
-              <CheckMarkIcon v-if="item.component" />
+              <span> {{ item.name }} </span>
+              <div class="main-header__navigation-icon">
+                <CheckMarkIcon v-if="item.component" />
+              </div>
             </a>
           </li>
         </ul>
@@ -62,6 +64,7 @@ const navigation = [
   position: relative;
   max-width: 1424px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   &__decor {
     width: 100%;
@@ -70,17 +73,53 @@ const navigation = [
   }
 
   &__container {
-    width: 100%;
-    padding: 0 var(--layout-12);
+    max-width: 100%;
+    padding: var(--layout-6) calc(2 * var(--layout-8)) var(--layout-6) calc(2 * var(--layout-8));
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__navigation {
+    max-width: 40%;
   }
 
   &__navigation-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--layout-4);
+    grid-template-columns: repeat(4, auto);
+    column-gap: var(--layout-8);
+    row-gap: var(--layout-2);
+  }
+
+  &__navigation-link {
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--layout-1);
+    letter-spacing: 1.58px;
+  }
+
+  &__navigation-icon {
+    width: 10px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: var(--layout-2);
+
+    & svg {
+      width: 10px;
+      height: 8px;
+    }
   }
 
   &__actions {
