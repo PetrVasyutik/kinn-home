@@ -1,8 +1,6 @@
 // Глобальные SCSS-переменные и CSS Custom Properties
 
 // SCSS variables (можно использовать в вычислениях)
-$color-primary: #2f80ed;
-$color-primary-hover: #1c6add;
 $color-bg-primary: #ffffff;
 $color-bg-secondary: #ffffef;
 $color-text-primary: #56593d;
@@ -49,7 +47,6 @@ $layout-12: 48px;
 
 // Экспортируем те же значения как CSS-переменные для использования в SFC/браузере
 :root {
-  --color-primary: #{$color-primary};
   --color-bg-primary: #{$color-bg-primary};
   --color-bg-secondary: #{$color-bg-secondary};
   --color-text-primary: #{$color-text-primary};
