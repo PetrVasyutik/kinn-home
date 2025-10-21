@@ -120,6 +120,11 @@ p {
     box-shadow 0.2s ease;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: var(--layout-2) var(--layout-3);
+  }
 }
 
 .btn:disabled,

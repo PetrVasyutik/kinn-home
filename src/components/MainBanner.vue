@@ -65,5 +65,63 @@
     font-size: 45px;
     margin-bottom: var(--layout-6);
   }
+
+  // Планшеты (768px - 1024px)
+  @media (max-width: 1024px) {
+    &__description {
+      bottom: 30px;
+      right: 30px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: var(--layout-2);
+    }
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: var(--layout-4);
+    }
+  }
+
+  // Мобильные устройства (до 768px)
+  @media (max-width: 768px) {
+    padding: 4px;
+
+    &__description {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      margin-bottom: var(--layout-1);
+    }
+
+    &__title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: var(--layout-3);
+    }
+  }
+
+  // Маленькие мобильные (до 480px)
+  @media (max-width: 480px) {
+    &__description {
+      bottom: 15px;
+      right: 15px;
+      left: 15px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: var(--layout-1);
+    }
+  }
 }
 </style>
