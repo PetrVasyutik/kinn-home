@@ -73,6 +73,7 @@ const navigation = [
 
   &__container {
     max-width: 1424px;
+    box-sizing: border-box;
     padding: var(--layout-6) calc(2 * var(--layout-8)) var(--layout-6) calc(2 * var(--layout-8));
     display: flex;
     align-items: center;
