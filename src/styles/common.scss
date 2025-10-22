@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+.wrapper {
+  width: 100%;
+}
+
 .header {
   flex: 0 0 auto;
 }
@@ -123,6 +127,7 @@ p {
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
+    transform 0.3 ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
   text-decoration: none;
@@ -147,10 +152,11 @@ p {
 .btn--primary {
   background-color: var(--color-text-primary);
   color: #fff;
+  transition: transform ease 0.3s;
 }
 
 .btn--primary:hover {
-  background-color: var(--color-bg-secondary);
+  transform: scale(1.05);
 }
 
 .btn--outline {

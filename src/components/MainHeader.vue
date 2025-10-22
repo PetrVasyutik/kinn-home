@@ -23,7 +23,7 @@
 
 <script setup>
 import LogoIcon from '@/components/icons/LogoIcon.vue';
-import ButtonActions from './ButtonActions.vue';
+import ButtonActions from '@/components/ButtonActions.vue';
 import SiteNavigation from '@/components/SiteNavigation.vue';
 import ModalMenu from '@/components/ModalMenu.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -76,7 +76,7 @@ onUnmounted(() => {
 .main-header {
   position: relative;
   box-sizing: border-box;
-  margin-bottom: var(--layout-5);
+  margin-bottom: 30px;
   width: 100%;
 
   &__decor {
