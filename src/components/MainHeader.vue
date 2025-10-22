@@ -81,6 +81,7 @@ onUnmounted(() => {
   position: relative;
   box-sizing: border-box;
   margin-bottom: var(--layout-5);
+  width: 100%;
 
   &__decor {
     width: 100%;
@@ -91,11 +92,12 @@ onUnmounted(() => {
   &__container {
     max-width: 1424px;
     box-sizing: border-box;
-    padding: var(--layout-6) calc(2 * var(--layout-8)) var(--layout-6) calc(2 * var(--layout-8));
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    padding: 30px 30px 20px 30px;
+
     position: relative;
   }
 
@@ -125,7 +127,7 @@ onUnmounted(() => {
     display: none;
     transition: all ease 0.3s;
     position: absolute;
-    left: 70px;
+    left: 12px;
     background: none;
     border: none;
     cursor: pointer;
@@ -210,9 +212,16 @@ onUnmounted(() => {
 
   @media (max-width: 1024px) {
 
+    margin-bottom: var(--layout-3);
+
+    &__decor {
+      height: var(--layout-3);
+      background-color: var(--color-bg-secondary);
+    }
+
     &__container {
       justify-content: end;
-      padding: var(--layout-4) calc(2 * var(--layout-8)) var(--layout-4) calc(2 * var(--layout-8));
+      padding: 15px 15px 10px 15px;
     }
 
     &__navigation {
@@ -230,6 +239,34 @@ onUnmounted(() => {
 
     &__menu-modal {
       display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: var(--layout-2);
+
+    &__container {
+      padding: 10px;
+    }
+
+    &__actions {
+      gap: var(--layout-3);
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    &__logo svg {
+      width: 70px;
+    }
+
+    &__actions {
+      gap: var(--layout-2);
+    }
+
+    &__actions svg {
+      width: 18px;
+      height: 18px;
     }
   }
 }

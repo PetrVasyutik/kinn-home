@@ -1,12 +1,6 @@
 // Общие стили проекта: заголовки, кнопки, контейнеры, утилиты
 // Используются CSS-переменные из variables.scss и SCSS-переменные при необходимости
 
-.body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 #app {
   display: flex;
   flex-direction: column;
@@ -14,9 +8,6 @@
 }
 
 .body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: var(--font-text-primary);
@@ -41,10 +32,21 @@
 
 // Контейнер
 .container {
-  margin: 0 auto;
-  padding: 0 var(--layout-8) 0 var(--layout-12);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 40px;
   max-width: 1424px;
   box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    padding: 0 var(--layout-6);
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 var(--layout-3);
+  }
 }
 
 // Заголовки
@@ -126,9 +128,13 @@ p {
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     font-size: 12px;
     padding: var(--layout-2) var(--layout-3);
+  }
+
+  @media (max-width: 480px) {
+    padding: var(--layout-1) var(--layout-2);
   }
 }
 

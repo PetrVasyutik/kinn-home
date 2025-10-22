@@ -19,9 +19,10 @@
 <style scoped lang="scss">
 .main-banner {
   width: 100%;
-  padding: 6px;
+  padding: 16px;
   background-color: var(--color-bg-secondary);
   position: relative;
+  box-sizing: border-box;
 
   &__image {
     padding-top: calc(100% * 700 / 1328);
@@ -49,7 +50,7 @@
     flex-direction: column;
     align-items: end;
     position: absolute;
-    bottom: 77px;
+    bottom: 80px;
     right: 85px;
   }
 
