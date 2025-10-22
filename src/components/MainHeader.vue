@@ -10,9 +10,7 @@
         <LogoIcon />
       </div>
       <div class="main-header__actions">
-        <UserIcon />
-        <SearchIcon />
-        <BasketIcon />
+        <button-actions />
       </div>
     </div>
     <transition name="menu" appear>
@@ -25,9 +23,7 @@
 
 <script setup>
 import LogoIcon from '@/components/icons/LogoIcon.vue';
-import BasketIcon from '@/components/icons/BasketIcon.vue';
-import SearchIcon from '@/components/icons/SearchIcon.vue';
-import UserIcon from '@/components/icons/UserIcon.vue';
+import ButtonActions from './ButtonActions.vue';
 import SiteNavigation from '@/components/SiteNavigation.vue';
 import ModalMenu from '@/components/ModalMenu.vue';
 import { ref, onMounted, onUnmounted } from 'vue';
@@ -108,19 +104,9 @@ onUnmounted(() => {
   }
 
   &__navigation {
-    max-width: 40%;
+    max-width: 38%;
+    flex-basis: 38%;
     transition: all ease 0.3s;
-  }
-
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: var(--layout-4);
-
-    & svg {
-      width: 32px;
-      height: 32px;
-    }
   }
 
   &__btn {
@@ -173,7 +159,7 @@ onUnmounted(() => {
   &__menu-modal {
     position: absolute;
     top: 70px;
-    left: 70px;
+    left: 40px;
     z-index: 100;
     display: none;
   }

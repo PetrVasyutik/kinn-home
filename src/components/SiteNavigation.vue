@@ -61,6 +61,10 @@ const navigation = [
     &:hover {
       transform: scale(1.05);
     }
+
+    span {
+      white-space: nowrap;
+    }
   }
 
   &__icon {
