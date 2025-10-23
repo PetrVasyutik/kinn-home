@@ -3,8 +3,8 @@
     <div class="main-banner__image">
       <div class="main-banner__img">
         <picture>
-          <source srcset="/src/images/img/banner.webp 1x, /src/images/img/banner@2x.webp 2x" type="image/webp">
-          <img src="/src/images/img/banner.png" srcset="/src/images/img/banner.png 1x, /src/images/img/banner@2x.png 2x" width="1328" height="700" alt="Яблоки на тарелке и два стакана с янтарной жидкостью">
+          <source srcset="@/images/img/banner.webp 1x, @/images/img/banner@2x.webp 2x" type="image/webp">
+          <img src="@/images/img/banner.png" srcset="@/images/img/banner.png 1x, @/images/img/banner@2x.png 2x" width="1328" height="700" alt="Яблоки на тарелке и два стакана с янтарной жидкостью">
         </picture>
       </div>
     </div>

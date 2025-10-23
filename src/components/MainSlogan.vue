@@ -25,7 +25,7 @@ import LeftArrowIcon from '@/components/icons/LeftArrowIcon.vue';
   &__text {
     font-size: 57px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   &__buttons {

@@ -5,6 +5,7 @@ $color-bg-primary: #ffffff;
 $color-bg-secondary: #ffffef;
 $color-text-primary: #56593d;
 $color-text-secondary: #ffffff;
+$color-bg-img: #d1cfcf;
 
 $font-text-primary:
   'Roboto',
@@ -54,6 +55,7 @@ $layout-section-small: 25px;
   --color-bg-secondary: #{$color-bg-secondary};
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
+  --color-bg-img: #{$color-bg-img};
 
   --font-text-primary: #{$font-text-primary};
   --font-text-secondary: #{$font-text-secondary};

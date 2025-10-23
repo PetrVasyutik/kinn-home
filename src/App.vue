@@ -11,6 +11,9 @@
         <section class="main__slogan">
           <main-slogan />
         </section>
+        <section class="main__board">
+          <main-board />
+        </section>
       </main>
       <footer class="footer"></footer>
     </div>
@@ -21,6 +24,7 @@
 import MainHeader from '@/components/MainHeader.vue';
 import MainBanner from '@/components/MainBanner.vue';
 import MainSlogan from '@/components/MainSlogan.vue';
+import MainBoard from '@/components/MainBoard.vue';
 </script>
 <style scoped lang="scss">
 .main {
@@ -31,6 +35,10 @@ import MainSlogan from '@/components/MainSlogan.vue';
 
   &__slogan {
     margin-bottom: var(--layout-section-large);
+  }
+
+  &__board {
+    margin-bottom: var(--layout-section-small);
   }
 }
 </style>
