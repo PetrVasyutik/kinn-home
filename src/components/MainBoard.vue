@@ -20,7 +20,6 @@ import BoardCard from '@/components/BoardCard.vue';
     width: 100%;
     text-align: center;
     margin-bottom: var(--layout-section-large);
-    font-size: 24px;
     line-height: 32.4px;
     letter-spacing: 0;
     font-weight: 400;

@@ -63,11 +63,9 @@
   }
 
   &__title {
-    font-size: 45px;
     margin-bottom: var(--layout-6);
   }
 
-  // Планшеты (768px - 1024px)
   @media (max-width: 1024px) {
     &__description {
       bottom: 30px;
@@ -80,12 +78,10 @@
     }
 
     &__title {
-      font-size: 36px;
       margin-bottom: var(--layout-4);
     }
   }
 
-  // Мобильные устройства (до 768px)
   @media (max-width: 768px) {
     padding: 4px;
 
@@ -101,13 +97,11 @@
     }
 
     &__title {
-      font-size: 28px;
       text-align: center;
       margin-bottom: var(--layout-3);
     }
   }
 
-  // Маленькие мобильные (до 480px)
   @media (max-width: 480px) {
     &__description {
       bottom: 15px;
@@ -120,7 +114,6 @@
     }
 
     &__title {
-      font-size: 20px;
       margin-bottom: var(--layout-1);
     }
   }

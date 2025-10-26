@@ -66,16 +66,59 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(60px, 4vw, 80px);
+  font-size: 60px;
 }
+
 h2 {
-  font-size: clamp(45px, 3vw, 60.48px);
+  font-size: 45px;
 }
+
 h3 {
-  font-size: clamp(24px, 2.5vw, 32.4px);
+  font-size: 24px;
 }
+
 h4 {
-  font-size: clamp(16px, 2vw, 21.6px);
+  font-size: var(--font-size-base);
+}
+
+@media (max-width: 1024px) {
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 }
 
 ul {
