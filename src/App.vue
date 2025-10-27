@@ -6,13 +6,16 @@
       </header>
       <main class="main">
         <section class="main__banner">
-          <main-banner />
+          <top-banner />
         </section>
         <section class="main__slogan">
           <main-slogan />
         </section>
         <section class="main__board">
           <main-board />
+        </section>
+        <section class="main__middle-banner">
+          <middle-banner />
         </section>
       </main>
       <footer class="footer"></footer>
@@ -22,9 +25,10 @@
 </template>
 <script setup>
 import MainHeader from '@/components/MainHeader.vue';
-import MainBanner from '@/components/MainBanner.vue';
+import TopBanner from '@/components/TopBanner.vue';
 import MainSlogan from '@/components/MainSlogan.vue';
 import MainBoard from '@/components/MainBoard.vue';
+import MiddleBanner from '@/components/MiddleBanner.vue'
 </script>
 <style scoped lang="scss">
 .main {
@@ -38,6 +42,10 @@ import MainBoard from '@/components/MainBoard.vue';
   }
 
   &__board {
+    margin-bottom: var(--layout-section-small);
+  }
+
+  &__middle-banner {
     margin-bottom: var(--layout-section-small);
   }
 }

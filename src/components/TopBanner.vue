@@ -1,23 +1,23 @@
 <template>
-  <div class="main-banner">
-    <div class="main-banner__image">
-      <div class="main-banner__img">
+  <div class="top-banner">
+    <div class="top-banner__image">
+      <div class="top-banner__img">
         <picture>
           <source srcset="@/images/img/banner.webp 1x, @/images/img/banner@2x.webp 2x" type="image/webp">
           <img src="@/images/img/banner.png" srcset="@/images/img/banner.png 1x, @/images/img/banner@2x.png 2x" width="1328" height="700" alt="Яблоки на тарелке и два стакана с янтарной жидкостью">
         </picture>
       </div>
     </div>
-    <div class="main-banner__description">
-      <div class="main-banner__subtitle">All collections</div>
-      <h2 class="main-banner__title">Elevate Your Everyday</h2>
+    <div class="top-banner__description">
+      <div class="top-banner__subtitle">All collections</div>
+      <h2 class="top-banner__title">Elevate Your Everyday</h2>
       <button class="btn btn--primary">Shop now</button>
     </div>
   </div>
 </template>
 <script setup></script>
 <style scoped lang="scss">
-.main-banner {
+.top-banner {
   width: 100%;
   padding: 16px;
   background-color: var(--color-bg-secondary);
