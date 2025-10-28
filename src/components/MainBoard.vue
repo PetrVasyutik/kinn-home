@@ -39,22 +39,6 @@ const boards = [
     srcset: '/images/img/board1.png 1x, /images/img/board1@2x.png 2x',
     webp: '/images/img/board1.webp 1x, /images/img/board1@2x.webp 2x',
   },
-  {
-    id: 2,
-    title: 'Maple Board - long',
-    price: '$125.00',
-    src: '/images/img/board2.png',
-    srcset: '/images/img/board2.png 1x, /images/img/board2@2x.png 2x',
-    webp: '/images/img/board2.webp 1x, /images/img/board2@2x.webp 2x',
-  },
-  {
-    id: 3,
-    title: 'Maple Board - Wide',
-    price: '$158.00',
-    src: '/images/img/board3.png',
-    srcset: '/images/img/board3.png 1x, /images/img/board3@2x.png 2x',
-    webp: '/images/img/board3.webp 1x, /images/img/board3@2x.webp 2x',
-  },
 ];
 </script>
 <style scoped lang="scss">
