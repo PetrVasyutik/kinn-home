@@ -2,14 +2,60 @@
   <div class="main-board">
     <h3 class="main-board__title">Maple Board Collections</h3>
     <div class="main-board__list">
-      <div class="main-board__item">
-        <board-card />
+      <div class="main-board__item"
+        v-for="board in boards"
+        :key="board.id"
+      >
+        <board-card :board="board" />
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import BoardCard from '@/components/BoardCard.vue';
+
+const boards = [
+  {
+    id: 1,
+    title: 'Maple Board - Short',
+    price: '$98.00',
+    src: '/images/img/board1.png',
+    srcset: '/images/img/board1.png 1x, /images/img/board1@2x.png 2x',
+    webp: '/images/img/board1.webp 1x, /images/img/board1@2x.webp 2x',
+  },
+  {
+    id: 2,
+    title: 'Maple Board - long',
+    price: '$125.00',
+    src: '/images/img/board2.png',
+    srcset: '/images/img/board2.png 1x, /images/img/board2@2x.png 2x',
+    webp: '/images/img/board2.webp 1x, /images/img/board2@2x.webp 2x',
+  },
+  {
+    id: 1,
+    title: 'Maple Board - Short',
+    price: '$98.00',
+    src: '/images/img/board1.png',
+    srcset: '/images/img/board1.png 1x, /images/img/board1@2x.png 2x',
+    webp: '/images/img/board1.webp 1x, /images/img/board1@2x.webp 2x',
+  },
+  {
+    id: 2,
+    title: 'Maple Board - long',
+    price: '$125.00',
+    src: '/images/img/board2.png',
+    srcset: '/images/img/board2.png 1x, /images/img/board2@2x.png 2x',
+    webp: '/images/img/board2.webp 1x, /images/img/board2@2x.webp 2x',
+  },
+  {
+    id: 3,
+    title: 'Maple Board - Wide',
+    price: '$158.00',
+    src: '/images/img/board3.png',
+    srcset: '/images/img/board3.png 1x, /images/img/board3@2x.png 2x',
+    webp: '/images/img/board3.webp 1x, /images/img/board3@2x.webp 2x',
+  },
+];
 </script>
 <style scoped lang="scss">
 .main-board {
@@ -26,13 +72,9 @@ import BoardCard from '@/components/BoardCard.vue';
   }
 
   &__list {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-  }
-
-  &__item {
-    width: calc(100% / 3);
   }
 }
 </style>

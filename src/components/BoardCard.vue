@@ -1,18 +1,25 @@
 <template>
-  <article class="board-card">
+  <article class="board-card" v-if="board">
     <div class="board-card__image">
       <div class="board-card__img">
         <picture>
-          <source srcset="@/images/img/board1.webp 1x, @/images/img/board1@2x.webp 2x" type="image/webp">
-          <img src="@/images/img/board1.png" srcset="@/images/img/board1.png 1x, @/images/img/board1@2x.png 2x" width="410" height="410" alt="Разделочная доска">
+          <source :srcset="board.webp" type="image/webp">
+          <img :src="board.src" :srcset="board.srcset" width="410" height="410" alt="Разделочная доска">
         </picture>
       </div>
     </div>
-    <h4 class="board-card__title">Maple Board - Short</h4>
-    <div class="board-card__price">$98.00</div>
+    <h4 class="board-card__title">{{ board.title }}</h4>
+    <div class="board-card__price">{{ board.price }}</div>
   </article>
 </template>
-<script setup></script>
+<script setup>
+const { board } = defineProps({
+  board: {
+    type: Object,
+    required: true,
+  },
+});
+</script>
 <style scoped lang="scss">
 .board-card {
   background-color: transparent;
