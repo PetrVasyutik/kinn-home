@@ -1,27 +1,32 @@
 <template>
-  <div class="main-promo">
+  <div class="main-promo" :class="`main-promo--${promo.align}`">
     <div class="main-promo__container">
       <div class="main-promo__image-container">
         <div class="main-promo__image">
         <div class="main-promo__img">
           <picture>
-            <source srcset="/images/img/story.webp 1x, /images/img/story@2x.webp 2x" type="image/webp">
-            <img src="/images/img/story.png" srcset="/images/img/story.png 1x, /images/img/story@2x.png 2x" width="743" height="618" alt="Our Design Story">
+            <source :srcset="promo.imageWebp + ' 1x, ' + promo.imageWebp2x + ' 2x'" type="image/webp">
+            <img :src="promo.image" :srcset="promo.image2x" width="743" height="618" alt="Our Design Story">
           </picture>
         </div>
       </div>
       </div>
 
       <div class="main-promo__description">
-        <h2 class="main-promo__title">Our Design Story</h2>
-        <p class="main-promo__text">
-          We believe in thoughtful, intentional living. So we promise not to clutter your cabinets with one-off pieces you’ll rarely use. Our collection only includes items you’ll reach for every day. Because mindful living should be simple, not stressful.
-        </p>
+        <h2 class="main-promo__title">{{ promo.title }}</h2>
+        <div class="main-promo__text">{{ promo.text }}</div>
       </div>
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+const { promo } = defineProps({
+  promo: {
+    type: Object,
+    required: true,
+  },
+});
+</script>
 <style scoped lang="scss">
 .main-promo {
   width: 100%;
@@ -29,6 +34,16 @@
   background-color: var(--color-bg-secondary);
   position: relative;
   box-sizing: border-box;
+
+  &--right {
+    .main-promo__image-container {
+      order: 2;
+    }
+
+    .main-promo__description {
+      order: 1;
+    }
+  }
 
   &__container {
     display: flex;
@@ -60,7 +75,95 @@
     & img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
+    }
+  }
+
+    &__description {
+      padding: 63px 87px;
+  }
+
+  &__title {
+    font-size: 29px;
+    line-height: 38.9px;
+    margin-bottom: calc(var(--layout-6) * 2);
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--color-text-primary);
+      left: 50%;
+      bottom: calc(-1 * var(--layout-6));
+      transform: translateX(-50%);
+      position: absolute;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 32.4px;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 1200px) {
+    &__description {
+      padding: 40px 60px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+
+    &__description {
+      padding: 20px 30px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 32.4px;
+      margin-bottom: var(--layout-6);
+
+      &::after {
+        bottom: calc(-1 * var(--layout-4));
+      }
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 28.8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &--right {
+      .main-promo__image-container {
+      order: 1;
+      }
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__image-container {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 28.8px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 25.6px;
     }
   }
 }
