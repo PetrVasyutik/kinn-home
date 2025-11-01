@@ -24,6 +24,9 @@
         >
           <main-promo :promo="promo" />
         </section>
+        <section class="main__signup">
+          <main-signup />
+        </section>
       </main>
       <footer class="footer"></footer>
     </div>
@@ -37,6 +40,7 @@ import MainSlogan from '@/components/MainSlogan.vue';
 import MainBoard from '@/components/MainBoard.vue';
 import MiddleBanner from '@/components/MiddleBanner.vue'
 import MainPromo from '@/components/MainPromo.vue'
+import MainSignup from '@/components/MainSignup.vue'
 
 const promos = [
   {
@@ -81,6 +85,10 @@ const promos = [
   }
 
   &__promo {
+    margin-bottom: var(--layout-section-small);
+  }
+
+  &__signup {
     margin-bottom: var(--layout-section-small);
   }
 }
