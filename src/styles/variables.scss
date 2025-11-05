@@ -45,6 +45,7 @@ $layout-5: 25px;
 $layout-6: 30px;
 $layout-8: 35px;
 $layout-12: 48px;
+$layout-13: 64px;
 $layout-section-large: 80px;
 $layout-section-small: 25px;
 
@@ -70,6 +71,7 @@ $layout-section-small: 25px;
   --layout-6: #{$layout-6};
   --layout-8: #{$layout-8};
   --layout-12: #{$layout-12};
+  --layout-13: #{$layout-13};
   --layout-section-large: #{$layout-section-large};
   --layout-section-small: #{$layout-section-small};
 }

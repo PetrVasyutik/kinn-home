@@ -51,6 +51,14 @@
   }
 }
 
+.main-section {
+  margin-bottom: var(--layout-section-small);
+
+  &--large {
+    margin-bottom: var(--layout-section-large);
+  }
+}
+
 // Заголовки
 h1,
 h2,

@@ -5,27 +5,30 @@
         <main-header />
       </header>
       <main class="main">
-        <section class="main__banner">
+        <section class="main-section main-section--large">
           <top-banner />
         </section>
-        <section class="main__slogan">
+        <section class="main-section main-section--large">
           <main-slogan />
         </section>
-        <section class="main__board">
+        <section class="main-section">
           <main-board />
         </section>
-        <section class="main__middle-banner">
+        <section class="main-section">
           <middle-banner />
         </section>
         <section
-          class="main__promo"
+          class="main-section"
           v-for="promo in promos"
           :key="promo.id"
         >
           <main-promo :promo="promo" />
         </section>
-        <section class="main__signup">
+        <section class="main-section">
           <main-signup />
+        </section>
+        <section class="main-section main-section--large">
+          <main-carousel :images="images"/>
         </section>
       </main>
       <footer class="footer"></footer>
@@ -41,6 +44,7 @@ import MainBoard from '@/components/MainBoard.vue';
 import MiddleBanner from '@/components/MiddleBanner.vue'
 import MainPromo from '@/components/MainPromo.vue'
 import MainSignup from '@/components/MainSignup.vue'
+import MainCarousel from '@/components/MainCarousel.vue'
 
 const promos = [
   {
@@ -64,32 +68,38 @@ const promos = [
     align: 'right',
   },
 ];
+
+const images = [
+  {
+    id: 1,
+    src: '/images/img/story.png',
+    srcset: '/images/img/story.png 1x, /images/img/story@2x.png 2x',
+    webp: '/images/img/story.webp 1x, /images/img/story@2x.webp 2x',
+    alt: '',
+  },
+  {
+    id: 2,
+    src: '/images/img/moment2.png',
+    srcset: '/images/img/moment2.png 1x, /images/img/moment2@2x.png 2x',
+    webp: '/images/img/moment2.webp 1x, /images/img/moment2@2x.webp 2x',
+    alt: '',
+  },
+  {
+    id: 3,
+    src: '/images/img/moment3.png',
+    srcset: '/images/img/moment3.png 1x, /images/img/moment3@2x.png 2x',
+    webp: '/images/img/moment3.webp 1x, /images/img/moment3@2x.webp 2x',
+    alt: '',
+  },
+  {
+    id: 4,
+    src: '/images/img/table.png',
+    srcset: '/images/img/table.png 1x, /images/img/table@2x.png 2x',
+    webp: '/images/img/table.webp 1x, /images/img/table@2x.webp 2x',
+    alt: '',
+  },
+];
+
 </script>
 <style scoped lang="scss">
-.main {
-
-  &__banner {
-    margin-bottom: var(--layout-section-large);
-  }
-
-  &__slogan {
-    margin-bottom: var(--layout-section-large);
-  }
-
-  &__board {
-    margin-bottom: var(--layout-section-small);
-  }
-
-  &__middle-banner {
-    margin-bottom: var(--layout-section-small);
-  }
-
-  &__promo {
-    margin-bottom: var(--layout-section-small);
-  }
-
-  &__signup {
-    margin-bottom: var(--layout-section-small);
-  }
-}
 </style>
