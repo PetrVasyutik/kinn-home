@@ -45,7 +45,15 @@ const { images } = defineProps({
   }
 
   &__item {
-    width: calc((100% - var(--layout-2) * 3) / 4);
+    flex: 0 0 calc((100% - var(--layout-2) * 3) / 4);
+
+    @media (max-width: 1024px) {
+      flex: 0 0 calc((100% - var(--layout-2)) / 2);
+    }
+
+    @media (max-width: 480px) {
+      flex: 0 0 100%;
+    }
   }
 
   &__image {
@@ -69,11 +77,5 @@ const { images } = defineProps({
     }
   }
 
-  @media (max-width: 1024px) {
-
-    &__item {
-    width: calc((100% - var(--layout-2)) / 2);
-    }
-  }
 }
 </style>

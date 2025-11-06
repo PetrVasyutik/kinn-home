@@ -43,8 +43,20 @@ const boards = [
 </script>
 <style scoped lang="scss">
 .main-board {
-  padding: 65px 32px;
+  padding: var(--layout-12) var(--layout-8);
   background-color: var(--color-bg-secondary);
+
+  @media (max-width: 1024px) {
+    padding: var(--layout-8) var(--layout-5);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--layout-6) var(--layout-4);
+  }
+
+  @media (max-width: 480px) {
+    padding: var(--layout-4) var(--layout-2);
+  }
 
   &__title {
     width: 100%;
@@ -53,12 +65,32 @@ const boards = [
     line-height: 32.4px;
     letter-spacing: 0;
     font-weight: 400;
+
+    @media (max-width: 1024px) {
+      margin-bottom: var(--layout-12);
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: var(--layout-6);
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: var(--layout-4);
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 </style>

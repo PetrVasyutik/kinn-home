@@ -116,6 +116,10 @@ const handleSubmit = () => {
     &--error {
       border-bottom-color: #d32f2f;
     }
+
+    @media (max-width: 768px) {
+      width: 230px;
+    }
   }
 
   &__error {
