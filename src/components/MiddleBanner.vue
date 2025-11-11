@@ -18,7 +18,7 @@
 <style scoped lang="scss">
 .middle-banner {
   width: 100%;
-  padding: 16px;
+  padding: var(--layout-3);
   background-color: var(--color-bg-secondary);
   position: relative;
   box-sizing: border-box;
@@ -91,7 +91,7 @@
     &__subtitle {
       font-size: 24px;
       letter-spacing: 1.4px;
-      padding: 0 60px;
+      padding: 0 40px;
     }
   }
 
@@ -101,7 +101,7 @@
     }
 
     &__subtitle {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     &__title {

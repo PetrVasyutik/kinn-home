@@ -19,7 +19,7 @@
 <style scoped lang="scss">
 .top-banner {
   width: 100%;
-  padding: 16px;
+  padding: var(--layout-3);
   background-color: var(--color-bg-secondary);
   position: relative;
   box-sizing: border-box;
@@ -59,7 +59,7 @@
     color: var(--color-text-primary);
     text-transform: uppercase;
     letter-spacing: 1.8px;
-    margin-bottom: 10px;
+    margin-bottom: var(--layout-2);
   }
 
   &__title {

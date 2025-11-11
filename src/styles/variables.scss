@@ -49,7 +49,6 @@ $layout-13: 64px;
 $layout-section-large: 80px;
 $layout-section-small: 25px;
 
-
 // Экспортируем те же значения как CSS-переменные для использования в SFC/браузере
 :root {
   --color-bg-primary: #{$color-bg-primary};
@@ -74,4 +73,41 @@ $layout-section-small: 25px;
   --layout-13: #{$layout-13};
   --layout-section-large: #{$layout-section-large};
   --layout-section-small: #{$layout-section-small};
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --layout-3: 12px;
+    --layout-4: 16px;
+    --layout-5: 20px;
+    --layout-6: 30px;
+    --layout-8: 25px;
+    --layout-12: 35px;
+    --layout-13: 48px;
+    --layout-section-large: 60px;
+    --layout-section-small: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --layout-3: 10px;
+    --layout-4: 12px;
+    --layout-5: 15px;
+    --layout-6: 25px;
+    --layout-8: 20px;
+    --layout-12: 30px;
+    --layout-13: 40px;
+    --layout-section-large: 48px;
+    --layout-section-small: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --layout-12: 20px;
+    --layout-13: 30px;
+    --layout-section-large: 36px;
+    --layout-section-small: 10px;
+  }
 }

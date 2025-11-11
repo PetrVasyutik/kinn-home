@@ -76,7 +76,7 @@ onUnmounted(() => {
 .main-header {
   position: relative;
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: var(--layout-6);
   width: 100%;
 
   &__decor {
@@ -92,7 +92,7 @@ onUnmounted(() => {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 30px 30px 20px 30px;
+    padding: var(--layout-6) var(--layout-6) var(--layout-4) var(--layout-6);
 
     position: relative;
   }

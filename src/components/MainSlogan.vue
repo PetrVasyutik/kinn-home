@@ -19,13 +19,13 @@ import LeftArrowIcon from '@/components/icons/LeftArrowIcon.vue';
 <style scoped lang="scss">
 .main-slogan {
   width: 100%;
-  padding: 10px 75px;
+  padding: var(--layout-2) var(--layout-section-large);
   box-sizing: border-box;
 
   &__text {
     font-size: 57px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: var(--layout-3);
 
     @media (max-width: 1024px) {
       font-size: 36px;

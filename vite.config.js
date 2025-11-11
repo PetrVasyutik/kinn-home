@@ -18,8 +18,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 8080,
-    strictPort: true,    // не использовать другой порт если занят
-    open: '/',           // открыть конкретный путь
-    cors: true           // разрешить CORS
+    strictPort: true,
+    open: '/',
+    cors: true,
   },
 })

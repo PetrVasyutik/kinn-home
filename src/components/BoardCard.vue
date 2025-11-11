@@ -29,7 +29,7 @@ const { board } = defineProps({
     padding-top: calc(100% * 410 / 410);
     position: relative;
     max-width: 410px;
-    margin-bottom: 15px;
+    margin-bottom: var(--layout-3);
   }
 
   &__img {
@@ -49,7 +49,7 @@ const { board } = defineProps({
   &__title {
     width: 100%;
     text-align: center;
-    margin-bottom: 7px;
+    margin-bottom: var(--layout-2);
     font-size: var(--font-size-base);
     line-height: 32.4px;
     letter-spacing: 0;

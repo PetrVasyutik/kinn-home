@@ -39,20 +39,13 @@ const { images } = defineProps({
   }
 
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--layout-2);
     width: 100%;
-  }
-
-  &__item {
-    flex: 0 0 calc((100% - var(--layout-2) * 3) / 4);
 
     @media (max-width: 1024px) {
-      flex: 0 0 calc((100% - var(--layout-2)) / 2);
-    }
-
-    @media (max-width: 480px) {
-      flex: 0 0 100%;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

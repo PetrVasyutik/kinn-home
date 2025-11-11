@@ -80,7 +80,7 @@ const { promo } = defineProps({
   }
 
     &__description {
-      padding: 63px 87px;
+      padding: var(--layout-13) var(--layout-section-large);
   }
 
   &__title {
@@ -111,17 +111,7 @@ const { promo } = defineProps({
     text-align: center;
   }
 
-  @media (max-width: 1200px) {
-    &__description {
-      padding: 40px 60px;
-    }
-  }
-
   @media (max-width: 1024px) {
-
-    &__description {
-      padding: 20px 30px;
-    }
 
     &__title {
       font-size: 24px;

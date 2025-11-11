@@ -120,6 +120,10 @@ const handleSubmit = () => {
     @media (max-width: 768px) {
       width: 230px;
     }
+
+    @media (max-width: 480px) {
+      width: 130px;
+    }
   }
 
   &__error {
