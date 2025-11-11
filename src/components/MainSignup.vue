@@ -3,7 +3,7 @@
     <div class="main-signup__container">
       <h2 class="main-signup__title">Sign up for our newsletter</h2>
       <div class="main-signup__text">Receive special offers and first look at new products.</div>
-      <form class="main-signup__form" @submit.prevent="handleSubmit">
+      <form class="main-signup__form" @submit.prevent="handleSubmit" novalidate>
         <div class="main-signup__input-wrapper">
           <input
             v-model="email"
